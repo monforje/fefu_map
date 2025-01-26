@@ -63,7 +63,7 @@ fun main() {
             val (distance, path) = dijkstraWithPath(graph, startNode, targetNode)
             println("Кратчайший путь от узла ${startNode.name} до узла ${targetNode.name}:")
             println("Расстояние: $distance")
-            println("Путь: ${path.joinToString(" -> ") { it.name }}")
+            println("Путь: ${path.joinToString(" -> ") { "${it.id}" }}")
         }
     } catch (e: Exception) {
         println("Ошибка при работе с базой данных: ${e.message}")
